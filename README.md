@@ -17,7 +17,7 @@ pip install -r requirements.txt
 To start the API, run the following command:
 
 ````lua
-uvicorn main:app --reload
+uvicorn api:app --reload
 ````
 
 This will start the API on port 8000 by default. You can then access the API at [http://localhost:8000/entitydetector?url=<url>](http://localhost:8000/entitydetector?url=<url>), where `<url>` is the URL to detect entities in.
