@@ -23,10 +23,6 @@ test:
 stop:
 	docker-compose down
 
-# Remove the Docker container
-remove:
-	docker-compose rm -f
-
 # Remove the Docker image
 clean:
 	docker rmi $(DOCKER_IMAGE_NAME)
