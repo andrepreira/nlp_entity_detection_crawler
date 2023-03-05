@@ -1,6 +1,6 @@
 # Doc API
 
-My Awesome API is a Python web application built with the [FastAPI](https://fastapi.tiangolo.com/) framework. It provides an endpoint for detecting entities in a given URL using the [spaCy](https://spacy.io/) natural language processing library.
+My NLP Crawler API is a Python web application built with the [FastAPI](https://fastapi.tiangolo.com/) framework. It provides an endpoint for detecting entities in a given URL using the [spaCy](https://spacy.io/) natural language processing library.
 
 ## Installation
 
@@ -55,17 +55,17 @@ You can also run the API using Docker. To build the Docker image, run the follow
 
 ````lua
 
-docker build -t doc-api .
+docker build -t nlp_entity_detection_crawler-app .
 
 ````
 
 
-This will build the Docker image with the tag `my-awesome-api`.
+This will build the Docker image with the tag `nlp_entity_detection_crawler-app`.
 
 To start a Docker container from the image, run the following command:
 
 ````lua
-docker run -p 8000:8000 doc-api
+docker run -p 8000:8000 nlp_entity_detection_crawler-app
 ````
 
 This will start a Docker container running the API on port 8000.
@@ -85,7 +85,7 @@ If you find a bug or have an idea for a new feature, feel free to open an issue 
 
 ## License
 
-My Awesome API is released under the [MIT License](https://opensource.org/licenses/MIT).
+My NLP Crawler API is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 
 
