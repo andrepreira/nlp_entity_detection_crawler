@@ -1,3 +1,95 @@
+# Doc API
+
+My Awesome API is a Python web application built with the [FastAPI](https://fastapi.tiangolo.com/) framework. It provides an endpoint for detecting entities in a given URL using the [spaCy](https://spacy.io/) natural language processing library.
+
+## Installation
+
+To run the API locally, you'll need Python 3.10 and pip installed on your machine. You can install the project dependencies using pip:
+
+````lua
+pip install -r requirements.txt
+````
+
+
+
+## Usage
+
+To start the API, run the following command:
+
+````lua
+uvicorn main:app --reload
+````
+
+This will start the API on port 8000 by default. You can then access the API at [http://localhost:8000/entitydetector?url=<url>](http://localhost:8000/entitydetector?url=<url>), where `<url>` is the URL to detect entities in.
+
+For example, to detect entities in the Wikipedia page for Python, you would use the following URL:
+
+[http://localhost:8000/entitydetector?url=https://en.wikipedia.org/wiki/Python_(programming_language)](http://localhost:8000/entitydetector?url=https://en.wikipedia.org/wiki/Python_(programming_language))
+
+This will return a JSON response containing the detected entities:
+
+````json
+{
+"entities": [
+{
+"text": "Python",
+"label": "LANGUAGE"
+},
+{
+"text": "Guido van Rossum",
+"label": "PERSON"
+},
+{
+"text": "C",
+"label": "LANGUAGE"
+},
+...
+]
+}
+````
+
+
+## Docker
+
+You can also run the API using Docker. To build the Docker image, run the following command:
+
+````lua
+
+docker build -t doc-api .
+
+````
+
+
+This will build the Docker image with the tag `my-awesome-api`.
+
+To start a Docker container from the image, run the following command:
+
+````lua
+docker run -p 8000:8000 doc-api
+````
+
+This will start a Docker container running the API on port 8000.
+
+## Testing
+
+To run the unit tests, use the following command:
+
+````lua
+python -m unittest discover
+````
+
+
+## Contributing
+
+If you find a bug or have an idea for a new feature, feel free to open an issue or submit a pull request on GitHub.
+
+## License
+
+My Awesome API is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+
+
 # NLP entity detection with crawler
 
 This is a simple crawler that uses the [Spacy](https://spacy.io/) to detect entities in a given URL.
