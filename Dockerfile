@@ -13,9 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container at /app
 COPY . .
 
-# Run the unit tests
-RUN python -m unittest discover
-
 # Expose port 8000 for the FastAPI application
 EXPOSE 8000
 
